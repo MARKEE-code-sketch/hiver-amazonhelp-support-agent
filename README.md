@@ -4,6 +4,16 @@ Date: 2026-09-17
 Evaluation scope: first 50 rows of the 150-row human-labelled golden set  
 Provider: Groq `openai/gpt-oss-20b`
 
+## Quick start: chat with the agent
+
+After cloning the repository and installing the dependencies, create `.env` with `GOOGLE_API_KEY` and `GROQ_API_KEY`, then run:
+
+```powershell
+python scripts\run_agent.py
+```
+
+The agent greets you and keeps one loaded session alive for multiple questions. Type `exit`, `quit`, or `:q` to close. Use `--message "your question"` when you want one JSON response instead of an interactive session.
+
 ## 1. Objective
 
 The goal is to build a small support agent for AmazonHelp customer messages. The agent predicts one of 13 support intents, retrieves similar historical support cases, drafts a grounded reply, and decides whether to answer automatically or send the case to a human.
