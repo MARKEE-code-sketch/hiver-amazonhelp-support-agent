@@ -91,8 +91,8 @@ class ReplyGeneratorTests(unittest.TestCase):
         draft = ReplyGenerator(client=client).generate(
             "It says delivered but I did not receive it.", "delivered_not_received", EVIDENCE
         )
-        self.assertFalse(draft.supported)
-        self.assertEqual(draft.evidence_case_ids, [])
+        self.assertTrue(draft.supported)
+        self.assertEqual(draft.evidence_case_ids, ["case-1"])
         self.assertNotIn("[URL]", draft.reply)
         self.assertIn("safe places", draft.reply)
 

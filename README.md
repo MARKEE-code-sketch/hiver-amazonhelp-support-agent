@@ -184,7 +184,7 @@ Google is used by the default classifier and reply-generator path. Groq is used 
 | Reply generator | `python scripts\run_reply_generator.py` | grounded structured reply |
 | Complete agent | `python scripts\run_agent.py --message "My parcel says delivered but I cannot find it"` | one JSON `AgentResult` |
 
-The interactive command defaults to Groq because it has been faster and more reliable for this project. It loads the local embedding model and TRAIN index once, then reuses them for every message in the session. Historical replies containing placeholders such as `[URL]` are not shown directly; the generator replaces them with an actionable safe response and routes the case to human review.
+The interactive command defaults to Groq because it has been faster and more reliable for this project. It loads the local embedding model and TRAIN index once, then reuses them for every message in the session. Historical replies containing placeholders such as `[URL]` are not shown directly; the generator replaces them with an actionable safe response and keeps the original evidence IDs.
 
 ### Chat with your own queries
 

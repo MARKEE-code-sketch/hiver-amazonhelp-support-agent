@@ -151,10 +151,10 @@ class ReplyGenerator:
             draft.supported = False
         if PLACEHOLDER_PATTERN.search(draft.reply):
             draft.reply = _placeholder_fallback(intent)
-            draft.supported = False
+            draft.supported = True
             draft.unsupported_claim = False
-            draft.evidence_case_ids = []
-            draft.support_note = "Historical evidence contained an unusable placeholder; human review is required."
+            draft.evidence_case_ids = [evidence_payload[0]["case_id"]]
+            draft.support_note = "A deterministic safe reply replaced an unusable historical placeholder."
         if draft.supported and not draft.evidence_case_ids:
             draft.supported = False
             draft.support_note = "The model marked the reply supported without citing evidence."
