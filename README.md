@@ -126,7 +126,36 @@ The LLM confidence score is not calibrated. Retrieved historical replies may con
 
 ## 7. Reproduction
 
-### Step 1: create the environment file
+The following steps start from a clean machine and end with a verified local copy of the submission.
+
+### Step 1: clone the repository
+
+Replace `<REPO_URL>` with the repository URL supplied in the submission.
+
+```powershell
+git clone <REPO_URL>
+cd Hiver_Assignment
+```
+
+If the repository was downloaded as a ZIP, extract it and run the remaining commands from the extracted `Hiver_Assignment` directory.
+
+### Step 2: create and activate a virtual environment
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+If PowerShell blocks activation, run the commands with the Python executable inside `.venv` directly, or use a shell where virtual-environment activation is permitted.
+
+### Step 3: install dependencies
+
+```powershell
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+### Step 4: create the environment file
 
 Create a file named `.env` in the project root. Do not commit it and do not print its contents.
 
@@ -138,13 +167,7 @@ GROQ_MODEL=openai/gpt-oss-20b
 
 Google is used by the default classifier and reply-generator path. Groq is used by the saved top-50 evaluation path. A new live run requires a valid key and may be affected by provider limits.
 
-### Step 2: install dependencies
-
-```powershell
-python -m pip install -r requirements.txt
-```
-
-### Step 3: run the modules in order
+### Step 5: run the modules in order
 
 | Module | Command | Main output |
 |---|---|---|
@@ -163,7 +186,7 @@ python -m pip install -r requirements.txt
 
 NOTE: The data-preparation commands require the local dataset paths supplied for this project. Existing processed artifacts can be used when the goal is only to reproduce the published result.
 
-### Step 4: reproduce the published result without API calls
+### Step 6: reproduce the published result without API calls
 
 ```powershell
 python -m pytest -q
@@ -179,7 +202,7 @@ Expected checks:
 - valid reply-judge count is `25`;
 - human reply review contains 47 passes and 3 failures.
 
-### Step 5: run a new top-50 evaluation
+### Step 7: run a new top-50 evaluation
 
 Only run this when API quota is available:
 
@@ -190,6 +213,22 @@ python scripts\judge_top50_replies.py
 ```
 
 The prediction runner checkpoints after every example. The scoring script is offline. The judge script uses the provider and may be interrupted by rate limits.
+
+### Step 8: inspect the final submission
+
+After the reproduction command succeeds, review these files:
+
+```text
+README.md                         complete project report and runbook
+blueprint.md                      architecture and module status
+decisions.md                      decision log
+artifacts/top50_metrics.json      intent comparison metrics
+artifacts/top50_reply_metrics.json reply-judge provider summary
+eval/golden_set_human_labelled.csv 150 human-labelled intent examples
+eval/top50_reply_human_review.csv 50 human-reviewed generated replies
+```
+
+The expected final checks are 52 passing tests, main intent accuracy of `0.8`, 25 provider-valid judge rows, and 47 human-approved versus 3 human-rejected replies.
 
 ## 8. Submission status
 
