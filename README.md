@@ -184,6 +184,39 @@ Google is used by the default classifier and reply-generator path. Groq is used 
 | Reply generator | `python scripts\run_reply_generator.py` | grounded structured reply |
 | Complete agent | `python scripts\run_agent.py --message "My parcel says delivered but I cannot find it"` | one JSON `AgentResult` |
 
+The interactive command defaults to Groq because it has been faster and more reliable for this project. It loads the local embedding model and TRAIN index once, then reuses them for every message in the session. Historical replies containing placeholders such as `[URL]` are not shown directly; the generator replaces them with an actionable safe response and routes the case to human review.
+
+### Chat with your own queries
+
+Start the chatbot with one command:
+
+```powershell
+python scripts\run_agent.py
+```
+
+It opens a reusable session:
+
+```text
+Hey! How may I help you?
+Loading the support agent once. You can ask multiple questions; type 'exit' to quit.
+
+You: My package says delivered but I cannot find it
+Agent: I’m sorry your package is marked delivered but is missing. Please check the tracking details, safe places, and with neighbors; if it is still missing, contact support so the delivery can be investigated.
+
+You: exit
+Goodbye!
+```
+
+The first startup loads the local embedding model and may take a little time. Later questions in the same session do not repeat that startup. Use `exit`, `quit`, or `:q` to close the session. For one JSON response instead of chat mode, use:
+
+```powershell
+python scripts\run_agent.py --provider groq --message "I was charged twice for the same order"
+```
+
+Use `--provider google` only when the Google API is available. Groq is the default interactive provider.
+
+For several questions in one process, keep the agent warm instead of starting a new Python process for every message. The current CLI is a one-message command; a small API or interactive session is the next production-oriented improvement.
+
 NOTE: The data-preparation commands require the local dataset paths supplied for this project. Existing processed artifacts can be used when the goal is only to reproduce the published result.
 
 ### Step 6: reproduce the published result without API calls

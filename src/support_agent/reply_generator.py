@@ -26,6 +26,24 @@ UNSUPPORTED_CLAIM_PATTERNS = (
     re.compile(r"\b(?:will arrive|guaranteed delivery|guarantee)\b", re.I),
 )
 
+PLACEHOLDER_PATTERN = re.compile(r"\[(?:URL|USER|ORDER|DATE|LINK)\]", re.I)
+
+
+def _placeholder_fallback(intent: str) -> str:
+    """Return a useful safe reply when historical templates contain placeholders."""
+
+    if intent == "delivered_not_received":
+        return (
+            "I’m sorry your package is marked delivered but is missing. Please check the tracking details, "
+            "safe places, and with neighbors; if it is still missing, contact support so the delivery can be investigated."
+        )
+    if intent == "delivery_or_courier_issue":
+        return (
+            "I’m sorry about the delivery issue. Please check the latest tracking update and carrier details, "
+            "then contact support if the parcel is still delayed or the tracking is incorrect."
+        )
+    return SAFE_HANDOFF
+
 
 class ReplyDraft(BaseModel):
     model_config = ConfigDict(extra="forbid")
@@ -131,6 +149,12 @@ class ReplyGenerator:
         if detected_unsupported:
             draft.unsupported_claim = True
             draft.supported = False
+        if PLACEHOLDER_PATTERN.search(draft.reply):
+            draft.reply = _placeholder_fallback(intent)
+            draft.supported = False
+            draft.unsupported_claim = False
+            draft.evidence_case_ids = []
+            draft.support_note = "Historical evidence contained an unusable placeholder; human review is required."
         if draft.supported and not draft.evidence_case_ids:
             draft.supported = False
             draft.support_note = "The model marked the reply supported without citing evidence."

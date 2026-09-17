@@ -80,6 +80,22 @@ class ReplyGeneratorTests(unittest.TestCase):
         self.assertFalse(draft.supported)
         self.assertTrue(draft.unsupported_claim)
 
+    def test_placeholder_reply_is_replaced_with_actionable_safe_reply(self) -> None:
+        client = FakeClient({
+            "reply": "Please follow these steps: [URL]",
+            "supported": True,
+            "evidence_case_ids": ["case-1"],
+            "unsupported_claim": False,
+            "support_note": "Evidence.",
+        })
+        draft = ReplyGenerator(client=client).generate(
+            "It says delivered but I did not receive it.", "delivered_not_received", EVIDENCE
+        )
+        self.assertFalse(draft.supported)
+        self.assertEqual(draft.evidence_case_ids, [])
+        self.assertNotIn("[URL]", draft.reply)
+        self.assertIn("safe places", draft.reply)
+
     def test_blank_message_is_rejected(self) -> None:
         with self.assertRaises(ValueError):
             ReplyGenerator(client=FakeClient(None)).generate(" ", "delivery_or_courier_issue", EVIDENCE)
