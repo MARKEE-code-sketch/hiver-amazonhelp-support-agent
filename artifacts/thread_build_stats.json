@@ -1,0 +1,17 @@
+{
+  "source_file": "twcs.csv",
+  "output_file": "amazonhelp_threads.jsonl",
+  "brand": "AmazonHelp",
+  "source_rows": 2811774,
+  "brand_seed_tweets": 169840,
+  "closure_passes": 9,
+  "selected_reference_ids": 379104,
+  "resolved_messages": 374042,
+  "missing_referenced_ids": 5062,
+  "usable_threads": 82534,
+  "excluded_threads_without_customer_or_brand": 0,
+  "usable_messages": 374042,
+  "single_message_threads": 0,
+  "multi_message_threads": 82534,
+  "cycle_count": 0
+}

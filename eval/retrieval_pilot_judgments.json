@@ -1,0 +1,24 @@
+{
+  "status": "assistant_judged_dev_pilot_not_independent_human_ground_truth",
+  "criterion": "Relevant if the historical customer case concerns the same underlying support problem and could help formulate a response; shared generic words alone do not count.",
+  "source": "data/processed/retrieval_dev_candidates.json",
+  "query_count": 15,
+  "excluded_dev_queries": "10 of the 25 sampled messages were Spanish, context-dependent, image-dependent, or lacked a clear support issue.",
+  "relevant_case_ids": {
+    "1366449": ["2276499"],
+    "140971": ["2373361", "913800", "232394", "1769416", "698754", "281383"],
+    "1631591": ["1720443", "1929470", "356766", "348536", "1166657", "847940"],
+    "608088": ["180317", "2643611"],
+    "2708445": ["1850441", "2149517"],
+    "149198": ["2630019", "2686036", "2417887"],
+    "2151917": ["2255213", "115862", "2647232", "1249979", "2147987", "926333", "1246347", "2652309", "2176523"],
+    "169618": ["1771766", "2102461", "1986965"],
+    "2720473": [],
+    "657857": ["2156956", "2676856", "33179", "1580383", "2587889"],
+    "1504841": ["2627653", "887982", "1632477"],
+    "782219": ["2227011", "915372", "1445491"],
+    "141025": ["1099845", "2555150", "2609954"],
+    "2468645": ["1661528", "1655125", "226062"],
+    "683810": ["1413421", "773480", "1449129", "734164", "314257", "1366271", "2300521"]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "language_scope": "english",
+  "splits": {
+    "train": {
+      "source_file": "train.jsonl",
+      "output_file": "train.jsonl",
+      "brand": "AmazonHelp",
+      "threads_read": 57773,
+      "direct_customer_reply_pairs": 110288,
+      "english_candidate_cases": 82457,
+      "rejected_by_english_scope": 27831,
+      "threads_with_cases": 44497,
+      "english_filter": "conservative_heuristic_requires_human_validation"
+    },
+    "dev": {
+      "source_file": "dev.jsonl",
+      "output_file": "dev.jsonl",
+      "brand": "AmazonHelp",
+      "threads_read": 12380,
+      "direct_customer_reply_pairs": 22556,
+      "english_candidate_cases": 15326,
+      "rejected_by_english_scope": 7230,
+      "threads_with_cases": 8754,
+      "english_filter": "conservative_heuristic_requires_human_validation"
+    },
+    "test": {
+      "source_file": "test.jsonl",
+      "output_file": "test.jsonl",
+      "brand": "AmazonHelp",
+      "threads_read": 12381,
+      "direct_customer_reply_pairs": 22132,
+      "english_candidate_cases": 15984,
+      "rejected_by_english_scope": 6148,
+      "threads_with_cases": 9357,
+      "english_filter": "conservative_heuristic_requires_human_validation"
+    }
+  }
+}

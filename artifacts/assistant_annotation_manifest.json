@@ -1,0 +1,25 @@
+{
+  "output_file": "C:\\Users\\mrina\\Downloads\\Hiver_Assignment\\eval\\golden_set_review_assistant_proposals.csv",
+  "row_count": 150,
+  "user_pilot_rows": 20,
+  "assistant_proposed_rows": 130,
+  "replaced_non_english_rows": 3,
+  "ambiguous_rows": 18,
+  "intent_distribution": {
+    "1": 5,
+    "2": 66,
+    "3": 8,
+    "4": 8,
+    "5": 7,
+    "6": 9,
+    "7": 5,
+    "8": 4,
+    "9": 10,
+    "10": 1,
+    "11": 5,
+    "12": 12,
+    "13": 10
+  },
+  "sha256": "D147C63E1CD580F6003965BEEE51E641C63EC0DE38A69897CF16FC2E89399996",
+  "status": "assistant_proposals_require_user_approval"
+}

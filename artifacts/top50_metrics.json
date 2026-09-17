@@ -1,0 +1,282 @@
+{
+  "slice": "first 50 rows of eval/golden_set_human_labelled.csv",
+  "provider": "Groq",
+  "model": "openai/gpt-oss-20b",
+  "metrics": {
+    "fixed": {
+      "count": 50,
+      "accuracy": 0.3,
+      "macro_f1": 0.0355,
+      "weighted_f1": 0.1385,
+      "per_intent": {
+        "account_access_or_security": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "customer_appreciation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        "damaged_wrong_or_missing_item": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "delivered_not_received": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        "delivery_or_courier_issue": {
+          "precision": 0.3,
+          "recall": 1.0,
+          "f1": 0.4615,
+          "support": 15
+        },
+        "digital_content_device_or_app": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        "order_management": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "other_or_ambiguous": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 5
+        },
+        "payment_charge_or_gift_card": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 5
+        },
+        "pricing_promotion_or_availability": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "prime_membership": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        "return_refund_or_replacement": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        "seller_or_marketplace": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        }
+      }
+    },
+    "tfidf": {
+      "count": 50,
+      "accuracy": 0.36,
+      "macro_f1": 0.4316,
+      "weighted_f1": 0.2844,
+      "per_intent": {
+        "account_access_or_security": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "customer_appreciation": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444,
+          "support": 4
+        },
+        "damaged_wrong_or_missing_item": {
+          "precision": 0.25,
+          "recall": 0.5,
+          "f1": 0.3333,
+          "support": 2
+        },
+        "delivered_not_received": {
+          "precision": 0.3333,
+          "recall": 0.6667,
+          "f1": 0.4444,
+          "support": 3
+        },
+        "delivery_or_courier_issue": {
+          "precision": 0.3333,
+          "recall": 0.0667,
+          "f1": 0.1111,
+          "support": 15
+        },
+        "digital_content_device_or_app": {
+          "precision": 0.3333,
+          "recall": 0.3333,
+          "f1": 0.3333,
+          "support": 3
+        },
+        "order_management": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "support": 2
+        },
+        "other_or_ambiguous": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 5
+        },
+        "payment_charge_or_gift_card": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 5
+        },
+        "pricing_promotion_or_availability": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "support": 2
+        },
+        "prime_membership": {
+          "precision": 0.2857,
+          "recall": 1.0,
+          "f1": 0.4444,
+          "support": 4
+        },
+        "return_refund_or_replacement": {
+          "precision": 0.6667,
+          "recall": 0.6667,
+          "f1": 0.6667,
+          "support": 3
+        },
+        "seller_or_marketplace": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "support": 1
+        }
+      }
+    },
+    "main": {
+      "count": 50,
+      "accuracy": 0.8,
+      "macro_f1": 0.8252,
+      "weighted_f1": 0.8043,
+      "per_intent": {
+        "account_access_or_security": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "customer_appreciation": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "damaged_wrong_or_missing_item": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "support": 2
+        },
+        "delivered_not_received": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "delivery_or_courier_issue": {
+          "precision": 0.8571,
+          "recall": 0.8,
+          "f1": 0.8276,
+          "support": 15
+        },
+        "digital_content_device_or_app": {
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8,
+          "support": 3
+        },
+        "order_management": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        "other_or_ambiguous": {
+          "precision": 0.75,
+          "recall": 0.6,
+          "f1": 0.6667,
+          "support": 5
+        },
+        "payment_charge_or_gift_card": {
+          "precision": 0.75,
+          "recall": 0.6,
+          "f1": 0.6667,
+          "support": 5
+        },
+        "pricing_promotion_or_availability": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "support": 2
+        },
+        "prime_membership": {
+          "precision": 0.5,
+          "recall": 0.75,
+          "f1": 0.6,
+          "support": 4
+        },
+        "return_refund_or_replacement": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "seller_or_marketplace": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        }
+      }
+    }
+  },
+  "generator_error_count": 2,
+  "generator_error_types": {
+    "BadRequestError": 2
+  },
+  "main_decisions": {
+    "ESCALATE": 34,
+    "AUTO_HANDLE": 16
+  },
+  "main_decision_reasons": {
+    "LOW_RETRIEVAL_CONFIDENCE": 18,
+    "HIGH_RISK_TOPIC": 8,
+    "CLEAR_LOW_RISK_SUPPORTED_CASE": 16,
+    "UNSUPPORTED_REPLY": 2,
+    "AMBIGUOUS_INTENT": 4,
+    "GENERATOR_FAILURE": 2
+  },
+  "limitation": "Intent labels are human-reviewed; escalation/action labels and independent reply ratings are not available."
+}

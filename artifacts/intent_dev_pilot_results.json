@@ -1,0 +1,276 @@
+{
+  "complete": true,
+  "split": "DEV",
+  "label_source": "assistant_review_not_human_verified",
+  "sample_seed": 2026,
+  "sample_size": 20,
+  "excluded": {
+    "155231": "The conversation context contains non-English customer text."
+  },
+  "scored_count": 19,
+  "observed_gold_intents": {
+    "digital_content_device_or_app": 2,
+    "delivery_or_courier_issue": 6,
+    "prime_membership": 1,
+    "order_management": 2,
+    "return_refund_or_replacement": 1,
+    "other_or_ambiguous": 3,
+    "delivered_not_received": 2,
+    "damaged_wrong_or_missing_item": 1,
+    "pricing_promotion_or_availability": 1
+  },
+  "metrics": {
+    "fixed": {
+      "correct": 6,
+      "accuracy": 0.3158,
+      "macro_f1_observed_intents": 0.0533
+    },
+    "tfidf": {
+      "correct": 7,
+      "accuracy": 0.3684,
+      "macro_f1_observed_intents": 0.4894
+    },
+    "classifier": {
+      "correct": 15,
+      "accuracy": 0.7895,
+      "macro_f1_observed_intents": 0.7835
+    }
+  },
+  "rows": [
+    {
+      "case_id": "141935",
+      "message": "[USER] But it says it can provide traffic conditions on the help page. If it can't, why am I prompted to ask, \"what's the traffic like right now\"",
+      "customer_context": [
+        "[USER] my Echo is not working as advertised and the chat team are useless. Have even provided an incorrect contact number. I am so angry right now, please help.",
+        "[USER] The traffic bit is not working.The [NUMBER] help pages provided, I had already done.Then one of the reps said traffic conditions is not a feature, yet it is advertised & even says how to get traffic conditions on the help page. I'm only getting time & best route. I know that, I drive it"
+      ],
+      "gold_intent": "digital_content_device_or_app",
+      "classifier_intent": "digital_content_device_or_app",
+      "classifier_confidence": 0.95,
+      "classifier_reason": "The customer is asking about the functionality and features of their Echo device regarding traffic condition reports.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "delivered_not_received"
+    },
+    {
+      "case_id": "666134",
+      "message": "[USER] when the live streaming of Raja the Great movie starts...",
+      "customer_context": [],
+      "gold_intent": "digital_content_device_or_app",
+      "classifier_intent": "digital_content_device_or_app",
+      "classifier_confidence": 1.0,
+      "classifier_reason": "The customer is asking about the streaming availability and start time for a movie (Prime Video content), which falls under digital content.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "digital_content_device_or_app"
+    },
+    {
+      "case_id": "641663",
+      "message": "[USER] Once again on the phone. It has been multiple shippers. Right now waiting on lasership and a supervisor. Your company is a joke! #boycottprime #holidayshopping",
+      "customer_context": [
+        "[USER] what's the point of \"prime shipping\" when you don't deliver?!? Sadly you are off to a bad start this holiday. #saynotoprime #holidayshopping",
+        "[USER] Umm...more like multiple deliveries. I have had orders say no one home yet I was in my front yard, packages lost then refunded, and currently one sitting on a truck but no one knows where #notcool #holiday"
+      ],
+      "gold_intent": "delivery_or_courier_issue",
+      "classifier_intent": "delivery_or_courier_issue",
+      "classifier_confidence": 0.9,
+      "classifier_reason": "The customer is complaining about the courier Lasership, waiting on the phone for a supervisor regarding shipments on a truck, and discussing delivery delays and issues from prior context.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "other_or_ambiguous"
+    },
+    {
+      "case_id": "695164",
+      "message": "[USER] Hi I cancelled my ‘Prime’ account on [NUMBER]th July, it is still running? Please DM me thanks",
+      "customer_context": [],
+      "gold_intent": "prime_membership",
+      "classifier_intent": "prime_membership",
+      "classifier_confidence": 0.99,
+      "classifier_reason": "The customer is asking about cancelling their Amazon Prime membership and why it is still running, which directly matches the prime_membership intent.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "prime_membership"
+    },
+    {
+      "case_id": "108246",
+      "message": "[USER] 'prime one day delivery' but it's not due to come until Monday [NUMBER]th? Ey?",
+      "customer_context": [],
+      "gold_intent": "delivery_or_courier_issue",
+      "classifier_intent": "delivery_or_courier_issue",
+      "classifier_confidence": 0.95,
+      "classifier_reason": "The customer is questioning why their supposedly one-day delivery item is not arriving until Monday, which relates to a delivery estimate or transit timeline.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "prime_membership"
+    },
+    {
+      "case_id": "989768",
+      "message": "[USER] I have indeed; the page just stays white. I’ve emailed customer services asking them to cancel it for me",
+      "customer_context": [
+        "[USER] hello, I am trying to cancel an order but the page is refusing to load. I’ve tried several browsers but still no luck"
+      ],
+      "gold_intent": "order_management",
+      "classifier_intent": "order_management",
+      "classifier_confidence": 1.0,
+      "classifier_reason": "The customer is attempting to cancel an order because the website page is unresponsive, which falls directly under order management.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "prime_membership"
+    },
+    {
+      "case_id": "2634087",
+      "message": "[USER] Also why is the DeutschePost shipment not traceable?",
+      "customer_context": [
+        "[USER] I will wait. Maybe the one that was shipped today by DeutschePost will arrive on Tuesday. Also the shipment is not trackable :(",
+        "[USER] I don‘t want my new iPhone to be scratched ;)"
+      ],
+      "gold_intent": "delivery_or_courier_issue",
+      "classifier_intent": "delivery_or_courier_issue",
+      "classifier_confidence": 0.95,
+      "classifier_reason": "The customer is asking about shipment tracking for a package in transit delivered by DeutschePost, which falls under delivery or courier issues.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "delivery_or_courier_issue"
+    },
+    {
+      "case_id": "1719225",
+      "message": "[USER] [NUMBER]-[NUMBER]-[NUMBER] is the order ID, [NUMBER] times return initiated, no one comes to pick up...What a pathetic support..all sleeping",
+      "customer_context": [],
+      "gold_intent": "return_refund_or_replacement",
+      "classifier_intent": "return_refund_or_replacement",
+      "classifier_confidence": 0.95,
+      "classifier_reason": "The customer states that a return has been initiated multiple times but no one has come to pick up the item, which clearly falls under return collection issues.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "return_refund_or_replacement"
+    },
+    {
+      "case_id": "1387205",
+      "message": "[USER] Hello. What is your complaints procedure please?",
+      "customer_context": [],
+      "gold_intent": "other_or_ambiguous",
+      "classifier_intent": "other_or_ambiguous",
+      "classifier_confidence": 0.9,
+      "classifier_reason": "The customer is asking about the general complaints procedure rather than reporting a specific order issue, making it a general inquiry that fits best under other_or_ambiguous.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "other_or_ambiguous"
+    },
+    {
+      "case_id": "130228",
+      "message": "[USER] please help I'm regular calling on customer care but issue is not resolve the IVR can not solve all problem sir I want talk to CCE",
+      "customer_context": [],
+      "gold_intent": "other_or_ambiguous",
+      "classifier_intent": "other_or_ambiguous",
+      "classifier_confidence": 0.8,
+      "classifier_reason": "The customer is expressing frustration with the automated IVR system and asking to speak to a human customer care executive without specifying the underlying reason or topic of their issue.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "customer_appreciation"
+    },
+    {
+      "case_id": "2428163",
+      "message": "[USER] Thank you. Just sent a message. However it says aim to reply within [NUMBER]hours. That doesn’t seem very ‘real time’ 🤔",
+      "customer_context": [
+        "[USER] [URL]"
+      ],
+      "gold_intent": "other_or_ambiguous",
+      "classifier_intent": "other_or_ambiguous",
+      "classifier_confidence": 0.8,
+      "classifier_reason": "The customer is complaining about the slow response time of customer support rather than inquiring about a specific order, delivery, or product issue.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "delivered_not_received"
+    },
+    {
+      "case_id": "2507105",
+      "message": "[USER] It clearly wasn't \"handed to resident\". [URL]",
+      "customer_context": [
+        "Turns out one of my [USER] [USER] parcels was dumped down the side of the bin rather than actually being delivered, I don't even know WHEN it came, no card was left, our Hermes delivery person told us about it when they knocked on today 😡."
+      ],
+      "gold_intent": "delivery_or_courier_issue",
+      "classifier_intent": "delivered_not_received",
+      "classifier_confidence": 0.9,
+      "classifier_reason": "The customer disputes the delivery status \"handed to resident\" because the parcel was actually dumped near a bin, fitting the criteria for delivered_not_received.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "other_or_ambiguous"
+    },
+    {
+      "case_id": "650073",
+      "message": "[USER] Okay, the reason I am complaining on Twitter, is because your customer service is not helping, is there some sort of management I can contact? Maybe they would actually care.",
+      "customer_context": [
+        "[USER] That is what I have been doing. They are not helpful. That is why I cancelled my prime and told them I would be returning the orders.",
+        "[USER] How do I return a product that has never been delivered?"
+      ],
+      "gold_intent": "delivered_not_received",
+      "classifier_intent": "delivered_not_received",
+      "classifier_confidence": 0.85,
+      "classifier_reason": "The prior context clearly shows the customer is trying to return a product that was never delivered, leading to frustration with customer service.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "customer_appreciation"
+    },
+    {
+      "case_id": "1466943",
+      "message": "[USER] the worst customer service I have ever experienced will not be using you again!! Sat in and waited [NUMBER] days for a parcel that should of been here on Wednesday and still no sign of it! Absolutely disgusting and you call up to some call centre that isn’t even yourselves!",
+      "customer_context": [],
+      "gold_intent": "delivery_or_courier_issue",
+      "classifier_intent": "delivery_or_courier_issue",
+      "classifier_confidence": 0.95,
+      "classifier_reason": "The customer is complaining that their parcel is late and has not arrived after waiting for several days past the expected delivery date.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "customer_appreciation"
+    },
+    {
+      "case_id": "176371",
+      "message": "[USER] It was ordered from [URL]",
+      "customer_context": [
+        "Hey [USER] seriously I had to wait almost [NUMBER] months to receive a new book in this condition? [URL]"
+      ],
+      "gold_intent": "damaged_wrong_or_missing_item",
+      "classifier_intent": "damaged_wrong_or_missing_item",
+      "classifier_confidence": 0.95,
+      "classifier_reason": "The prior context indicates the customer received a new book in bad condition, which falls directly under damaged, wrong, or missing items.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "damaged_wrong_or_missing_item"
+    },
+    {
+      "case_id": "1912140",
+      "message": "[USER] I purchased two books using Amazon pay and it showing ₹[NUMBER] as cashback for each book but I haven't got the cashback in my account.",
+      "customer_context": [
+        "[USER] After how much time of payment the Cashback is added to the concerned account."
+      ],
+      "gold_intent": "pricing_promotion_or_availability",
+      "classifier_intent": "payment_charge_or_gift_card",
+      "classifier_confidence": 0.95,
+      "classifier_reason": "The customer is asking about missing cashback rewards related to an Amazon Pay transaction.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "account_access_or_security"
+    },
+    {
+      "case_id": "1190169",
+      "message": "[USER] I found those steps on your website and have checked them including trying to contact Hermes. Only option was to email them which I have done.",
+      "customer_context": [
+        "#hermes #hermesuk [USER] Just received an email to say my parcel has been signed for and delivered. I've been at home for several hours and no parcel has been delivered & I have definitely not signed anything. Please advise what to do next."
+      ],
+      "gold_intent": "delivered_not_received",
+      "classifier_intent": "delivered_not_received",
+      "classifier_confidence": 0.95,
+      "classifier_reason": "The prior context indicates the parcel was marked as delivered and signed for, but the customer states they did not receive it or sign for it. The current message follows up on checking steps related to this missing delivery.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "account_access_or_security"
+    },
+    {
+      "case_id": "2728874",
+      "message": "[USER] Not sure what feedback you want? You can see its not good",
+      "customer_context": [
+        "[USER] Glad my order was sent in good packaging for the £[NUMBER] you charged me! Not sure it was worth the money. What do you think? [URL]"
+      ],
+      "gold_intent": "delivery_or_courier_issue",
+      "classifier_intent": "other_or_ambiguous",
+      "classifier_confidence": 0.9,
+      "classifier_reason": "The customer is expressing sarcastic feedback about the packaging and the cost without specifying an actionable support issue.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "other_or_ambiguous"
+    },
+    {
+      "case_id": "676880",
+      "message": "[USER] didn’t realize “want it by Wed” [NUMBER]-day shipping meant will ship in [NUMBER] days on Wed. Really needed one item tomorrow. Very much a let down [URL]",
+      "customer_context": [],
+      "gold_intent": "order_management",
+      "classifier_intent": "delivery_or_courier_issue",
+      "classifier_confidence": 0.85,
+      "classifier_reason": "The customer is complaining about the shipping speed and delivery estimate ('want it by Wed' shipping meant it will ship on Wed and they needed it tomorrow), which falls under delivery timing and estimates.",
+      "fixed_intent": "delivery_or_courier_issue",
+      "tfidf_intent": "order_management"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+google-genai
+groq
+numpy
+pandas
+pydantic
+python-dotenv
+scikit-learn
+scipy
+sentence-transformers
+pytest

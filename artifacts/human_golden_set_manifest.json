@@ -1,0 +1,6 @@
+{
+  "status": "human_reviewed",
+  "row_count": 150,
+  "source": "eval\\golden_set_review_assistant_proposals.csv",
+  "note": "User reviewed and corrected the proposal labels before this snapshot was created."
+}

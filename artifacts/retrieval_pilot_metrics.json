@@ -1,0 +1,20 @@
+{
+  "status": "assistant_judged_dev_pilot_not_independent_human_ground_truth",
+  "judged_dev_queries": 15,
+  "embedding": {
+    "precision_at_1": 0.6667,
+    "precision_at_5": 0.5867,
+    "pooled_recall_at_5": 0.8598,
+    "recall_query_count": 14,
+    "query_count": 15
+  },
+  "tfidf": {
+    "precision_at_1": 0.1333,
+    "precision_at_5": 0.2133,
+    "pooled_recall_at_5": 0.1839,
+    "recall_query_count": 14,
+    "query_count": 15
+  },
+  "mean_embedding_search_ms": 167.21,
+  "mean_tfidf_search_ms": 5.18
+}

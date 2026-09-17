@@ -1,0 +1,36 @@
+{
+  "all_50": {
+    "count": 50,
+    "pass_rate": 0.5,
+    "critical_unsupported_claim_rate": 0.0,
+    "average_scores": {
+      "relevance": 2.8,
+      "groundedness": 2.7,
+      "helpfulness": 2.28,
+      "tone": 2.8,
+      "safety": 2.16,
+      "escalation_appropriateness": 2.16
+    }
+  },
+  "valid_judgment_subset": {
+    "count": 25,
+    "pass_rate": 1.0,
+    "critical_unsupported_claim_rate": 0.0,
+    "average_scores": {
+      "relevance": 4.6,
+      "groundedness": 4.4,
+      "helpfulness": 3.56,
+      "tone": 4.44,
+      "safety": 3.0,
+      "escalation_appropriateness": 3.0
+    }
+  },
+  "valid_judgment_count": 25,
+  "judge_error_counts": {
+    "RateLimitError": 21,
+    "ValidationError": 2
+  },
+  "provider": "Groq",
+  "model": "openai/gpt-oss-20b",
+  "limitation": "No independent human reply ratings yet; judge agreement is pending. Rate-limited and malformed judge rows are excluded from the valid subset."
+}

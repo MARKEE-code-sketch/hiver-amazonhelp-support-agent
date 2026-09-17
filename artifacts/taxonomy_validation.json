@@ -1,0 +1,22 @@
+{
+  "source_file": "train.jsonl",
+  "case_count": 82457,
+  "matched_by_at_least_one_discovery_term": 39050,
+  "overlapping_discovery_terms": 8459,
+  "note": "Keyword coverage validates theme presence only; it is not an intent classifier.",
+  "intent_keyword_matches": {
+    "order_management": 2997,
+    "delivery_or_courier_issue": 14976,
+    "delivered_not_received": 1086,
+    "return_refund_or_replacement": 8051,
+    "damaged_wrong_or_missing_item": 1487,
+    "payment_charge_or_gift_card": 4194,
+    "account_access_or_security": 4235,
+    "prime_membership": 1454,
+    "digital_content_device_or_app": 3274,
+    "seller_or_marketplace": 1683,
+    "pricing_promotion_or_availability": 3942,
+    "other_or_ambiguous": 0,
+    "customer_appreciation": 1516
+  }
+}

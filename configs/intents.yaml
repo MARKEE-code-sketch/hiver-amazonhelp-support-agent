@@ -1,0 +1,203 @@
+version: 1
+brand: AmazonHelp
+derived_from: train
+intent_count: 13
+primary_rule: Label the customer's current support problem, not their emotion or the wording of Amazon's historical reply.
+ambiguity_rule: Use other_or_ambiguous only when the customer problem cannot be determined from the current message and prior context.
+
+intents:
+  - name: order_management
+    display_name: Order management
+    definition: Creating, changing, cancelling, or understanding the state of an order before normal delivery begins.
+    include:
+      - Customer wants to cancel or change an order.
+      - Order was cancelled without the customer's permission.
+      - Order is stuck before dispatch, such as preparing to ship.
+    exclude:
+      - A dispatched parcel is late or has poor tracking; use delivery_or_courier_issue.
+      - The customer received the wrong or damaged item; use damaged_wrong_or_missing_item.
+    examples:
+      - My order got cancelled without my permission. Can you tell me why?
+      - I have an order that has not shipped that I want to cancel.
+    discovery_terms: [cancel, order status, order cancelled, not shipped, has not shipped, preparing to ship, shipping soon, pending order, change order, place order]
+
+  - name: delivery_or_courier_issue
+    display_name: Delivery, tracking, or courier issue
+    definition: Tracking, delay, delivery estimate, failed delivery, address handling, packaging during transit, or courier conduct.
+    include:
+      - The parcel is late or tracking has not updated.
+      - The customer asks when an order will arrive.
+      - A courier missed a delivery, left a parcel badly, or behaved improperly.
+    exclude:
+      - Tracking says delivered but the customer cannot find it; use delivered_not_received.
+      - The order has not entered shipping and needs cancellation; use order_management.
+    examples:
+      - It was supposed to be delivered yesterday and still nothing has arrived.
+      - Why do your couriers keep putting my parcels in stupid places?
+    discovery_terms: [delivery, delivered late, tracking, shipment, shipping, courier, package late, parcel late, arrive]
+
+  - name: delivered_not_received
+    display_name: Marked delivered but not received
+    definition: Amazon or the carrier reports delivery, but the customer cannot locate or did not receive the parcel.
+    include:
+      - Tracking says delivered but nothing arrived.
+      - Someone allegedly signed for the parcel, but the customer denies receiving it.
+      - The parcel was delivered to the wrong property.
+    exclude:
+      - The parcel is still in transit or simply late; use delivery_or_courier_issue.
+      - An item or part is missing from a received package; use damaged_wrong_or_missing_item.
+    examples:
+      - Tracking says received and signed personally by me, but I have not received the product.
+      - It says delivered, but I did not get anything.
+    discovery_terms: [marked delivered, says delivered, not received, never received, did not receive, did not get, signed by]
+
+  - name: return_refund_or_replacement
+    display_name: Return, refund, or replacement
+    definition: Starting or checking a return, refund, collection, exchange, reimbursement, or replacement process.
+    include:
+      - Customer asks for or is waiting for a refund.
+      - Return collection did not happen or Amazon cannot find a returned item.
+      - Customer asks how to exchange or replace an otherwise unspecified item.
+    exclude:
+      - The core problem is a damaged, wrong, or incomplete item; use damaged_wrong_or_missing_item even if a refund is requested.
+      - The customer disputes an unexplained or duplicate charge; use payment_charge_or_gift_card.
+    examples:
+      - I returned an item, but you say you have not received it. What should I do?
+      - Return pickup was scheduled, but no one came to pick it up.
+    discovery_terms: [return, refund, replacement, replace, exchange, pickup, pick up, money back, reimburse]
+
+  - name: damaged_wrong_or_missing_item
+    display_name: Damaged, wrong, defective, or incomplete item
+    definition: A received product is damaged, defective, incorrect, counterfeit, or missing expected pieces.
+    include:
+      - Product arrived broken, damaged, or does not work.
+      - Customer received a different product.
+      - Parts or accessories are missing from the package.
+    exclude:
+      - The whole parcel never arrived; use delivered_not_received or delivery_or_courier_issue.
+      - Customer wants a routine return without an item defect; use return_refund_or_replacement.
+    examples:
+      - I received a misprinted book today.
+      - I ordered a Funko figure and received a fish feeder instead.
+    discovery_terms: [damaged, defective, broken, wrong item, missing item, missing part, incomplete, counterfeit, does not work]
+
+  - name: payment_charge_or_gift_card
+    display_name: Payment, charge, or gift card
+    definition: Paying for an order, failed payment, unrecognized or duplicate charge, gift-card balance, or accepted payment method.
+    include:
+      - Card or checkout payment failed.
+      - Customer sees an incorrect, unexplained, or duplicate charge.
+      - Gift card, Amazon Pay, cash-on-delivery, or payment-method question.
+    exclude:
+      - A Prime subscription charge is the central issue; use prime_membership.
+      - Customer is waiting for an approved refund; use return_refund_or_replacement.
+    examples:
+      - Do you accept this card as payment?
+      - I cannot use my gift card to place the order.
+    discovery_terms: [payment, charged, charge, credit card, debit card, gift card, amazon pay, cash on delivery, cod]
+
+  - name: account_access_or_security
+    display_name: Account access or security
+    definition: Login, password, locked account, identity verification, suspicious access, personal details, or account security.
+    include:
+      - Customer cannot sign in or the account is locked.
+      - Customer needs identity or account verification help.
+      - Account may be compromised or personal details need changing.
+    exclude:
+      - Login failure occurs only inside a named digital product and is clearly product-specific; use digital_content_device_or_app.
+      - Third-party seller fraud without account compromise; use seller_or_marketplace.
+    examples:
+      - My account has been locked. Please unlock it.
+      - The site will not allow me to sign in with my email address.
+    discovery_terms: [account, sign in, signin, login, log in, password, locked, verification, verify identity, hacked, security]
+
+  - name: prime_membership
+    display_name: Prime membership
+    definition: Joining, renewing, cancelling, charging, eligibility, or benefits of the Amazon Prime membership itself.
+    include:
+      - Customer wants to start or cancel Prime or its free trial.
+      - Customer disputes a Prime membership charge.
+      - Customer asks whether their account has a Prime benefit.
+    exclude:
+      - A Prime order is late; use delivery_or_courier_issue.
+      - A Prime Video title or playback is the issue; use digital_content_device_or_app.
+    examples:
+      - If I am still on my 30-day free trial, can I cancel it?
+      - Amazon Prime just charged me.
+    discovery_terms: [prime membership, prime member, prime trial, cancel prime, prime subscription, prime charged, charged for prime]
+
+  - name: digital_content_device_or_app
+    display_name: Digital content, Amazon device, or app
+    definition: Kindle, Alexa, Echo, Fire TV, Prime Video, Amazon Music, digital purchases, or Amazon application functionality.
+    include:
+      - Amazon device or app is malfunctioning.
+      - Digital book, music, movie, or episode is missing or unavailable.
+      - Customer needs help viewing or using digital content.
+    exclude:
+      - General Amazon account access without a product-specific issue; use account_access_or_security.
+      - Prime membership billing or cancellation; use prime_membership.
+    examples:
+      - My Fire TV locks up constantly when I use YouTube in 4K mode.
+      - When will this episode be available on Prime Video?
+    discovery_terms: [kindle, alexa, echo, fire tv, firetv, prime video, amazon video, amazon music, digital content, amazon app, ebook, movie, episode]
+
+  - name: seller_or_marketplace
+    display_name: Third-party seller or marketplace
+    definition: A marketplace seller's conduct, communication, trustworthiness, listing, fulfilment, or seller-specific policy.
+    include:
+      - Seller is unresponsive, suspicious, or possibly fraudulent.
+      - Customer has a seller-specific shipping or listing dispute.
+      - Unwanted communication from marketplace sellers.
+    exclude:
+      - Amazon directly delivered a damaged or wrong item; use damaged_wrong_or_missing_item.
+      - The issue is only the advertised price or deal; use pricing_promotion_or_availability.
+    examples:
+      - The seller appears fraudulent, will not reply, and provided no tracking.
+      - I received more unwanted emails from sellers this morning.
+    discovery_terms: [seller, vendor, marketplace, third party, fraudulent seller, fulfilled by]
+
+  - name: pricing_promotion_or_availability
+    display_name: Pricing, promotion, product information, or availability
+    definition: Product price, tax, deal, discount, offer, availability, eligibility, or pre-purchase product information.
+    include:
+      - Customer asks why prices differ or whether a discount applies.
+      - Customer asks when a sale ends or an item becomes available.
+      - Customer asks about product tax, compatibility, or availability before purchase.
+    exclude:
+      - Customer was incorrectly charged after payment; use payment_charge_or_gift_card.
+      - A digital movie or episode is unavailable; use digital_content_device_or_app.
+    examples:
+      - When does the Black Friday or Cyber Monday sale end?
+      - Why are there two different prices for the same item?
+    discovery_terms: [price, pricing, deal, discount, promotion, promo, offer, coupon, tax, available, availability, in stock]
+
+  - name: other_or_ambiguous
+    display_name: Other or ambiguous
+    definition: The support need is outside the taxonomy or cannot be determined from the customer message and available context.
+    include:
+      - Generic praise, feedback, or complaint with no actionable issue.
+      - A short follow-up such as “done” whose earlier context still does not reveal the problem.
+      - Multiple intents are equally central and no primary problem can be selected.
+    exclude:
+      - Any case that can be assigned to one of the other eleven intents using the tie-breaking rules.
+      - A case with unusual wording whose underlying support problem is still clear.
+    examples:
+      - Terrible service.
+      - Done.
+    discovery_terms: []
+
+  - name: customer_appreciation
+    display_name: Customer appreciation
+    definition: Genuine thanks, praise, or positive feedback with no unresolved support request.
+    include:
+      - Customer thanks Amazon or a support employee for successful help.
+      - Customer shares genuine praise about a product, delivery, or service.
+      - Customer confirms that an earlier problem is resolved and expresses satisfaction.
+    exclude:
+      - Sarcastic thanks attached to an active complaint; label the underlying problem.
+      - Praise followed by an unresolved request; label the unresolved request.
+      - A neutral joke or statement with no clear praise; use other_or_ambiguous.
+    examples:
+      - I love you Amazon!
+      - Thank you again for your great customer service.
+    discovery_terms: [thank you, thanks amazon, great customer service, love you amazon, all is well, best purchase, so happy]

@@ -1,0 +1,14 @@
+[
+  {"name": "safe_delivery", "intent": "delivery_or_courier_issue", "confidence": 0.90, "similarity": 0.82, "reply_supported": true, "expected": "AUTO_HANDLE", "reason": "CLEAR_LOW_RISK_SUPPORTED_CASE"},
+  {"name": "safe_digital_issue", "intent": "digital_content_device_or_app", "confidence": 0.85, "similarity": 0.71, "reply_supported": true, "expected": "AUTO_HANDLE", "reason": "CLEAR_LOW_RISK_SUPPORTED_CASE"},
+  {"name": "account_security", "intent": "account_access_or_security", "confidence": 0.99, "similarity": 0.95, "reply_supported": true, "expected": "ESCALATE", "reason": "HIGH_RISK_TOPIC"},
+  {"name": "payment_issue", "intent": "payment_charge_or_gift_card", "confidence": 0.96, "similarity": 0.90, "reply_supported": true, "expected": "ESCALATE", "reason": "HIGH_RISK_TOPIC"},
+  {"name": "refund_issue", "intent": "return_refund_or_replacement", "confidence": 0.94, "similarity": 0.88, "reply_supported": true, "expected": "ESCALATE", "reason": "HIGH_RISK_TOPIC"},
+  {"name": "unclear_message", "intent": "other_or_ambiguous", "confidence": 0.90, "similarity": 0.80, "reply_supported": true, "expected": "ESCALATE", "reason": "AMBIGUOUS_INTENT"},
+  {"name": "explicit_ambiguity", "intent": "delivery_or_courier_issue", "confidence": 0.90, "similarity": 0.80, "reply_supported": true, "ambiguous": true, "expected": "ESCALATE", "reason": "AMBIGUOUS_INTENT"},
+  {"name": "low_intent_confidence", "intent": "delivery_or_courier_issue", "confidence": 0.79, "similarity": 0.90, "reply_supported": true, "expected": "ESCALATE", "reason": "LOW_INTENT_CONFIDENCE"},
+  {"name": "missing_context", "intent": "order_management", "confidence": 0.90, "similarity": 0.90, "reply_supported": true, "context_sufficient": false, "expected": "ESCALATE", "reason": "INSUFFICIENT_CONTEXT"},
+  {"name": "weak_evidence", "intent": "delivery_or_courier_issue", "confidence": 0.90, "similarity": 0.69, "reply_supported": true, "expected": "ESCALATE", "reason": "LOW_RETRIEVAL_CONFIDENCE"},
+  {"name": "no_evidence", "intent": "delivery_or_courier_issue", "confidence": 0.90, "similarity": null, "reply_supported": true, "expected": "ESCALATE", "reason": "LOW_RETRIEVAL_CONFIDENCE"},
+  {"name": "unsupported_claim", "intent": "delivery_or_courier_issue", "confidence": 0.90, "similarity": 0.90, "reply_supported": false, "expected": "ESCALATE", "reason": "UNSUPPORTED_REPLY"}
+]

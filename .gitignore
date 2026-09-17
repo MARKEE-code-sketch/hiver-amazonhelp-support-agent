@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+
+# Raw and processed datasets are local-only.
+twitter_dataset/
+data/processed/
+
+# Review rows may contain unredacted customer details; keep CSVs local.
+eval/*.csv

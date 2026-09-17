@@ -1,0 +1,39 @@
+{
+  "source_file": "amazonhelp_threads.jsonl",
+  "method": "chronological_by_complete_thread",
+  "total_threads": 82534,
+  "ratios": {
+    "train": 0.7,
+    "dev": 0.15,
+    "test": 0.15
+  },
+  "splits": {
+    "train": {
+      "file": "train.jsonl",
+      "threads": 57773,
+      "messages": 270966,
+      "earliest_started_at": "2011-10-13T11:57:18+00:00",
+      "latest_started_at": "2017-11-19T09:00:54+00:00",
+      "bytes": 83731436,
+      "sha256": "F21E14AC1E44513448DB63B397E7A8E2C9B81AFCD48FB8413422CEBB44F585D8"
+    },
+    "dev": {
+      "file": "dev.jsonl",
+      "threads": 12380,
+      "messages": 51810,
+      "earliest_started_at": "2017-11-19T09:02:33+00:00",
+      "latest_started_at": "2017-11-27T13:04:20+00:00",
+      "bytes": 17552989,
+      "sha256": "9BCC5318D0579E702C5B83E9C1415B1B4A30F753B83515CC6EAA975590C0C87E"
+    },
+    "test": {
+      "file": "test.jsonl",
+      "threads": 12381,
+      "messages": 51266,
+      "earliest_started_at": "2017-11-27T13:05:00+00:00",
+      "latest_started_at": "2017-12-03T23:04:17+00:00",
+      "bytes": 17535430,
+      "sha256": "121C40B79890DF6E3830649F74D242BA903FC3772DA6EF4561EAC9E649F2800B"
+    }
+  }
+}

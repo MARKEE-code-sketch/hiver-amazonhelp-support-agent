@@ -1,0 +1,29 @@
+{
+  "status": "frozen_user_approved_batch_not_individually_hand_labelled",
+  "row_count": 150,
+  "unique_test_threads": 150,
+  "taxonomy_intents": 13,
+  "review_status_counts": {
+    "user_pilot_approved": 20,
+    "user_approved_batch": 130
+  },
+  "intent_counts": {
+    "1": 5,
+    "2": 66,
+    "3": 8,
+    "4": 8,
+    "5": 7,
+    "6": 9,
+    "7": 5,
+    "8": 4,
+    "9": 10,
+    "10": 1,
+    "11": 5,
+    "12": 12,
+    "13": 10
+  },
+  "pilot_disagreements_preserved": 9,
+  "source_proposal_sha256": "D147C63E1CD580F6003965BEEE51E641C63EC0DE38A69897CF16FC2E89399996",
+  "taxonomy_sha256": "7780D47056B2A839975CD13DB7F6379C51A302C23E57D11CB6659E982625940D",
+  "golden_set_sha256": "D0C286DE3DBF7778C4D9819563DE5E2AB036EC65E43A578AC06C5D5F44728980"
+}

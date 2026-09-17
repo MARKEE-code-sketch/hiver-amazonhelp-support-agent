@@ -1,0 +1,30 @@
+{
+  "source": "data/processed/amazonhelp_cases/dev.jsonl",
+  "sample_seed": 2026,
+  "sample_size": 20,
+  "label_source": "assistant_review_not_human_verified",
+  "excluded": {
+    "155231": "The conversation context contains non-English customer text."
+  },
+  "labels": {
+    "141935": "digital_content_device_or_app",
+    "666134": "digital_content_device_or_app",
+    "641663": "delivery_or_courier_issue",
+    "695164": "prime_membership",
+    "108246": "delivery_or_courier_issue",
+    "989768": "order_management",
+    "2634087": "delivery_or_courier_issue",
+    "1719225": "return_refund_or_replacement",
+    "1387205": "other_or_ambiguous",
+    "130228": "other_or_ambiguous",
+    "2428163": "other_or_ambiguous",
+    "2507105": "delivery_or_courier_issue",
+    "650073": "delivered_not_received",
+    "1466943": "delivery_or_courier_issue",
+    "176371": "damaged_wrong_or_missing_item",
+    "1912140": "pricing_promotion_or_availability",
+    "1190169": "delivered_not_received",
+    "2728874": "delivery_or_courier_issue",
+    "676880": "order_management"
+  }
+}

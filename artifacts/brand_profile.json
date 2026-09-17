@@ -1,0 +1,247 @@
+{
+  "source_file": "twcs.csv",
+  "source_bytes": 516508641,
+  "total_rows": 2811774,
+  "inbound_customer_rows": 1537843,
+  "outbound_brand_rows": 1273931,
+  "selection_metric": "outbound_tweets",
+  "validation_metric": "unique_customer_messages_replied_to",
+  "winner_by_occurrence": "AmazonHelp",
+  "top_brands": [
+    {
+      "brand": "AmazonHelp",
+      "outbound_tweets": 169840,
+      "outbound_with_parent": 169287,
+      "verified_customer_replies": 168814,
+      "unique_customer_messages_replied_to": 154976,
+      "verified_reply_rate": 0.993959
+    },
+    {
+      "brand": "AppleSupport",
+      "outbound_tweets": 106860,
+      "outbound_with_parent": 106719,
+      "verified_customer_replies": 106646,
+      "unique_customer_messages_replied_to": 106623,
+      "verified_reply_rate": 0.997997
+    },
+    {
+      "brand": "Uber_Support",
+      "outbound_tweets": 56270,
+      "outbound_with_parent": 56261,
+      "verified_customer_replies": 56160,
+      "unique_customer_messages_replied_to": 55182,
+      "verified_reply_rate": 0.998045
+    },
+    {
+      "brand": "SpotifyCares",
+      "outbound_tweets": 43265,
+      "outbound_with_parent": 43243,
+      "verified_customer_replies": 43092,
+      "unique_customer_messages_replied_to": 41585,
+      "verified_reply_rate": 0.996001
+    },
+    {
+      "brand": "Delta",
+      "outbound_tweets": 42253,
+      "outbound_with_parent": 42197,
+      "verified_customer_replies": 42114,
+      "unique_customer_messages_replied_to": 36134,
+      "verified_reply_rate": 0.99671
+    },
+    {
+      "brand": "Tesco",
+      "outbound_tweets": 38573,
+      "outbound_with_parent": 38501,
+      "verified_customer_replies": 38468,
+      "unique_customer_messages_replied_to": 25282,
+      "verified_reply_rate": 0.997278
+    },
+    {
+      "brand": "AmericanAir",
+      "outbound_tweets": 36764,
+      "outbound_with_parent": 36598,
+      "verified_customer_replies": 36531,
+      "unique_customer_messages_replied_to": 36457,
+      "verified_reply_rate": 0.993662
+    },
+    {
+      "brand": "TMobileHelp",
+      "outbound_tweets": 34317,
+      "outbound_with_parent": 34287,
+      "verified_customer_replies": 34215,
+      "unique_customer_messages_replied_to": 33837,
+      "verified_reply_rate": 0.997028
+    },
+    {
+      "brand": "comcastcares",
+      "outbound_tweets": 33031,
+      "outbound_with_parent": 33007,
+      "verified_customer_replies": 32921,
+      "unique_customer_messages_replied_to": 30369,
+      "verified_reply_rate": 0.99667
+    },
+    {
+      "brand": "British_Airways",
+      "outbound_tweets": 29361,
+      "outbound_with_parent": 29315,
+      "verified_customer_replies": 29290,
+      "unique_customer_messages_replied_to": 24084,
+      "verified_reply_rate": 0.997582
+    },
+    {
+      "brand": "SouthwestAir",
+      "outbound_tweets": 28977,
+      "outbound_with_parent": 28889,
+      "verified_customer_replies": 28828,
+      "unique_customer_messages_replied_to": 28285,
+      "verified_reply_rate": 0.994858
+    },
+    {
+      "brand": "VirginTrains",
+      "outbound_tweets": 27817,
+      "outbound_with_parent": 27522,
+      "verified_customer_replies": 27416,
+      "unique_customer_messages_replied_to": 26272,
+      "verified_reply_rate": 0.985584
+    },
+    {
+      "brand": "Ask_Spectrum",
+      "outbound_tweets": 25860,
+      "outbound_with_parent": 25807,
+      "verified_customer_replies": 25617,
+      "unique_customer_messages_replied_to": 24976,
+      "verified_reply_rate": 0.990603
+    },
+    {
+      "brand": "XboxSupport",
+      "outbound_tweets": 24557,
+      "outbound_with_parent": 24341,
+      "verified_customer_replies": 23235,
+      "unique_customer_messages_replied_to": 20213,
+      "verified_reply_rate": 0.946166
+    },
+    {
+      "brand": "sprintcare",
+      "outbound_tweets": 22381,
+      "outbound_with_parent": 22335,
+      "verified_customer_replies": 22209,
+      "unique_customer_messages_replied_to": 20026,
+      "verified_reply_rate": 0.992315
+    },
+    {
+      "brand": "hulu_support",
+      "outbound_tweets": 21872,
+      "outbound_with_parent": 21783,
+      "verified_customer_replies": 21681,
+      "unique_customer_messages_replied_to": 21468,
+      "verified_reply_rate": 0.991267
+    },
+    {
+      "brand": "sainsburys",
+      "outbound_tweets": 19466,
+      "outbound_with_parent": 19417,
+      "verified_customer_replies": 19399,
+      "unique_customer_messages_replied_to": 17717,
+      "verified_reply_rate": 0.996558
+    },
+    {
+      "brand": "GWRHelp",
+      "outbound_tweets": 19364,
+      "outbound_with_parent": 19294,
+      "verified_customer_replies": 19237,
+      "unique_customer_messages_replied_to": 18506,
+      "verified_reply_rate": 0.993441
+    },
+    {
+      "brand": "AskPlayStation",
+      "outbound_tweets": 19098,
+      "outbound_with_parent": 18694,
+      "verified_customer_replies": 18675,
+      "unique_customer_messages_replied_to": 18650,
+      "verified_reply_rate": 0.977851
+    },
+    {
+      "brand": "ChipotleTweets",
+      "outbound_tweets": 18749,
+      "outbound_with_parent": 18612,
+      "verified_customer_replies": 18599,
+      "unique_customer_messages_replied_to": 18565,
+      "verified_reply_rate": 0.992
+    }
+  ],
+  "winner_sample_pairs": [
+    {
+      "customer_tweet_id": "2502234",
+      "customer_text": "\u5bc6\u6797\u3055\u3093\u304b\u3089\u306c\u3081\u308d\u306e\u652f\u6255\u3044\u6848\u5185\u3055\u3048\u6765\u306a\u3044\u3093\u3060\u3051\u3069\u3001\u30b3\u30f3\u30d3\u30cb\u3067\u652f\u6255\u3044\u3057\u306a\u3044\u3068\u767a\u9001\u3057\u306a\u3044\u3063\u3066\u8a71\u3060\u304b\u3089\u3001\u5c4a\u304f\u306e\u3044\u3064\u3060\uff1f(\u30fb_\u30fb?)\ud83d\udca6",
+      "brand_reply_tweet_id": "2502233",
+      "brand_reply_text": "@customer \u304a\u652f\u6255\u3044\u756a\u53f7\u306f\u5546\u54c1\u306b\u3088\u3063\u3066\u767a\u884c\u6642\u671f\u304c\u7570\u306a\u308a\u307e\u3059\u3002\u4e88\u7d04\u6ce8\u6587\u306e\u5834\u5408\u306f\u3001\u767a\u9001\u4e88\u5b9a\u65e5\u304c\u8fd1\u304f\u306a\u3063\u3066\u304b\u3089\u767a\u884c\u3055\u308c\u307e\u3059\u3002\u767a\u884c\u30bf\u30a4\u30df\u30f3\u30b0\u306a\u3069\u8a73\u3057\u304f\u306f\u3001\u30ea\u30f3\u30af\u306e\u30d8\u30eb\u30d7\u30da\u30fc\u30b8\u3092\u3054\u53c2\u7167\u304f\u3060\u3055\u3044\u3002[URL] TN"
+    },
+    {
+      "customer_tweet_id": "343022",
+      "customer_text": "Cuando esperas con todas tus ganas el tratamiento post-alisado de Kativa y @customer te lo trae asi...\ud83d\ude10\ud83e\udd26\ud83c\udffb\u200d\u2640\ufe0f [URL]",
+      "brand_reply_tweet_id": "343020",
+      "brand_reply_text": "@customer Hola Nuri. Lamentamos mucho lo sucedido con tu pedido. \u00bfPodr\u00edas informarnos, si tu pedido es vendido por Amazon o por un vendedor externo de nuestro sitio web? ^HC"
+    },
+    {
+      "customer_tweet_id": "427378",
+      "customer_text": "@AmazonHelp Thank you for your help. Fingers crossed you can help me resolve this :)",
+      "brand_reply_tweet_id": "427379",
+      "brand_reply_text": "@customer You're very welcome! Keep us updated and please let us know if there's anything further we can try to assist with! ^KN"
+    },
+    {
+      "customer_tweet_id": "2855104",
+      "customer_text": "rapaz eu comprei o Kindle na sexta e ele j\u00e1 chegou @customer vcs s\u00e3o top",
+      "brand_reply_tweet_id": "2855102",
+      "brand_reply_text": "@customer Ol\u00e1, Anna! Bem-vinda \u00e0 fam\u00edlia Kindle! Me diga, voc\u00ea j\u00e1 baixou algum eBook? \ud83e\udd14 ^CR"
+    },
+    {
+      "customer_tweet_id": "859660",
+      "customer_text": "@AmazonHelp What abt the trouble I've gone through? My dad is going out of town and had to take those headphones along to gift someone. What now?",
+      "brand_reply_tweet_id": "859662",
+      "brand_reply_text": "@customer instances are mitigated. Please give us another opportunity to serve you better. (2/2) ^BS"
+    },
+    {
+      "customer_tweet_id": "829492",
+      "customer_text": "@AmazonHelp Refund received. Thanks. Had I not raised an alarm this money would have never come back. Thanks @customer",
+      "brand_reply_tweet_id": "829493",
+      "brand_reply_text": "@customer Appreciate your patience. We will consider this as feedback and ensure to pass it on internally for improvements. ^RW"
+    },
+    {
+      "customer_tweet_id": "779978",
+      "customer_text": "@customer Amazon is very bad. 1st they accept the order. After few day they cancelled order. If you can't place order why discnt",
+      "brand_reply_tweet_id": "779977",
+      "brand_reply_text": "@customer Apologies for the unpleasant experience. We'd really want to change that, please contact our team [URL]"
+    },
+    {
+      "customer_tweet_id": "1319040",
+      "customer_text": "@AmazonHelp Customer care executive doesn\u2019t know anything on every call every other person suggest new resolution.",
+      "brand_reply_tweet_id": "1319041",
+      "brand_reply_text": "@customer Sorry about the inconvenience. Please share your details here: [URL] &amp; we'll look into your concern. ^BS"
+    },
+    {
+      "customer_tweet_id": "1345918",
+      "customer_text": "@AmazonHelp Livraison en point relais, \u00e0 la boulangerie Richter sur Montpellier",
+      "brand_reply_tweet_id": "1345920",
+      "brand_reply_text": "@customer Et que dit le suivi de votre colis sur le site du transporteur? ^FT"
+    },
+    {
+      "customer_tweet_id": "2949381",
+      "customer_text": "@AmazonHelp I did that already",
+      "brand_reply_tweet_id": "2949383",
+      "brand_reply_text": "@customer I'm glad you've contacted us about this. In some cases, items may arrive later than expected. If your items don't arrive by the 5th, please contact us once more for additional options. ^RA"
+    },
+    {
+      "customer_tweet_id": "1582688",
+      "customer_text": "Amazon\u30a2\u30d7\u30ea\u3001\u306a\u305c\u304b\u30ab\u30c6\u30b4\u30ea\u30fc\u304c\u8868\u793a\u3055\u308c\u306a\u3044\nprime\u4f1a\u54e1\u306e\u8cfc\u8cb7\u610f\u6b32\u3092\u524a\u304c\u306a\u3044\u3067\u304a\u304f\u308c\u3088\n#Amazon [URL]",
+      "brand_reply_tweet_id": "1582686",
+      "brand_reply_text": "@customer \u3054\u4e0d\u4fbf\u3092\u304a\u304b\u3051\u3057\u7533\u3057\u8a33\u3054\u3056\u3044\u307e\u305b\u3093\u3002\u6050\u308c\u5165\u308a\u307e\u3059\u304c\u3001\u540c\u69d8\u306e\u554f\u984c\u3092\u518d\u73fe\u3059\u308b\u3053\u3068\u304c\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f\u3002\u304a\u624b\u6570\u3067\u3059\u304c\u3001\u4e00\u5ea6Amazon\u30a2\u30d7\u30ea\u306e\u518d\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u30fb\u7aef\u672b\u306e\u518d\u8d77\u52d5\u3092\u304a\u8a66\u3057\u304f\u3060\u3055\u3044\u3002 YM"
+    },
+    {
+      "customer_tweet_id": "329194",
+      "customer_text": "@AmazonHelp Mr.Moin is a big lair he committed me installation has been done today at any cost.Kindly find the message from your moin which he sent to me.He committed today's time.I have a all proof Amazon is failed to provide better service to their customers..Admit it. [URL]",
+      "brand_reply_tweet_id": "329198",
+      "brand_reply_text": "@customer I get your concern. Apologies for the experience. Please reply to the email from our specialist team. We'll assist you further. Rest assured. Please don't provide your order details, we consider it personal information. Our Twitter page is visible to public. ^SV"
+    }
+  ],
+  "seed": 42
+}

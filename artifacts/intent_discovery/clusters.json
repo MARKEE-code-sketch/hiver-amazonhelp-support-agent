@@ -1,0 +1,585 @@
+{
+  "source_file": "train.jsonl",
+  "method": "tfidf_minibatch_kmeans_for_discovery_only",
+  "sample_size": 5000,
+  "cluster_count": 20,
+  "seed": 42,
+  "silhouette_score": -0.044264,
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "size": 1,
+      "top_terms": [
+        "android app",
+        "wonder",
+        "party",
+        "android",
+        "user alexa",
+        "indian",
+        "store",
+        "play",
+        "coming",
+        "asking",
+        "alexa",
+        "using"
+      ],
+      "examples": [
+        {
+          "case_id": "2187544",
+          "customer_text": "[USER] When is Alexa Android app coming to indian play store.. still am using from third party websites.. I wonder why no one asking about this.",
+          "historical_reply": "[USER] The Alexa app will be available in the App Store / Play Store when the devices start shipping the week of Oct 30."
+        }
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "size": 3,
+      "top_terms": [
+        "reasons",
+        "cheating",
+        "user yeah",
+        "yeah",
+        "isn",
+        "delivery",
+        "yo",
+        "yesterday morning",
+        "15",
+        "14th",
+        "14",
+        "13th nov"
+      ],
+      "examples": [
+        {
+          "case_id": "1166659",
+          "customer_text": "[USER] Yeah, one of the reasons could be ‘cheating’",
+          "historical_reply": "[USER] Thank you for your feedback, Piyush. We will have the feedback forwarded to the concerned team internally."
+        },
+        {
+          "case_id": "1626103",
+          "customer_text": "[USER] Yeah done ☺️☺️!!",
+          "historical_reply": "[USER] Thank you for sharing your details. We'll get back to you soon."
+        },
+        {
+          "case_id": "2073925",
+          "customer_text": "[USER] Yeah it isn’t out for delivery yet ☹️",
+          "historical_reply": "[USER] Can I ask what is the estimated delivery date on the order, please?^GA"
+        }
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "size": 4973,
+      "top_terms": [
+        "user user",
+        "url",
+        "amazon",
+        "order",
+        "delivery",
+        "prime",
+        "delivered",
+        "help",
+        "time",
+        "just",
+        "day",
+        "customer"
+      ],
+      "examples": [
+        {
+          "case_id": "345884",
+          "customer_text": "[USER] Done..",
+          "historical_reply": "[USER] Thanks for the update, appreciate your patience while we work on it."
+        },
+        {
+          "case_id": "1398494",
+          "customer_text": "[USER] No",
+          "historical_reply": "[USER] We recommend that you contact the carrier to get the most accurate information. The carrier number is [URL]"
+        },
+        {
+          "case_id": "2170975",
+          "customer_text": "[USER] No",
+          "historical_reply": "[USER] Da qui non possiamo vedere i tuoi ordini, ma il nostro Servizio Clienti resta a tua disposizione per ulteriori verifiche."
+        },
+        {
+          "case_id": "439132",
+          "customer_text": "[USER] Have already done it... #amazonisworst",
+          "historical_reply": "[USER] Thanks for the headsup. We'll check and get back to you at the earliest with an update."
+        },
+        {
+          "case_id": "879265",
+          "customer_text": "[USER] so what....call me 9718111527",
+          "historical_reply": "[USER] Please go to: [URL] click to call, enter your number, desired language and enter to call, we'd call you.^BS"
+        },
+        {
+          "case_id": "256687",
+          "customer_text": "[USER] No",
+          "historical_reply": "[USER] In this case, please reach us from here: [URL] we'll look into this and assist you."
+        },
+        {
+          "case_id": "397309",
+          "customer_text": "[USER] Done",
+          "historical_reply": "[USER] Great! We wish you all the luck for the contest. :)"
+        },
+        {
+          "case_id": "429518",
+          "customer_text": "[USER] Will do!",
+          "historical_reply": "[USER] Thanks so much, Noemí! Please let us know if you ever have any other questions or concerns."
+        }
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "size": 1,
+      "top_terms": [
+        "issue pls",
+        "imei",
+        "amazon agent",
+        "order 405",
+        "405",
+        "agent",
+        "resolve",
+        "pls",
+        "user order",
+        "issue",
+        "order",
+        "amazon"
+      ],
+      "examples": [
+        {
+          "case_id": "839360",
+          "customer_text": "[USER] ORDER # 405-1447024-2589138 forfeited handset supplied. Amazon Agent not accepting due to IMEI Issue. Pls resolve.",
+          "historical_reply": "[USER] We would like to help you. Please share your details with us here: [URL] We'll get in touch shortly.(1/2)^CB [USER] Please don't provide your order details as we consider it personal information. Our twitter page is visible to public.(2/2)^CB"
+        }
+      ]
+    },
+    {
+      "cluster_id": 4,
+      "size": 2,
+      "top_terms": [
+        "pathetic service",
+        "pathetic",
+        "amazongreatindianfestival",
+        "pending",
+        "amazon delivery",
+        "service",
+        "amazonindia",
+        "delivery",
+        "order",
+        "amazon",
+        "user pathetic",
+        "yesterday morning"
+      ],
+      "examples": [
+        {
+          "case_id": "643796",
+          "customer_text": "#AmazonIndia #AmazonGreatIndianFestival #Amazon Delivery pending Order no406-0955565-7295555 Pathetic service OFD-9oct pathetic service.",
+          "historical_reply": "[USER] Hi! I'm sorry about that, I’d like to help you; please fill this form: [URL] and I’ll contact you soon.(1/2)^SC [USER] Please don't provide your order details, we consider it to be personal information. Our page is visible to the public.(2/2)"
+        },
+        {
+          "case_id": "384510",
+          "customer_text": "[USER] : Pathetic service from yours",
+          "historical_reply": "[USER] We'd certainly want to fix this. Could you please elaborate your query so that we can look into this?"
+        }
+      ]
+    },
+    {
+      "cluster_id": 5,
+      "size": 1,
+      "top_terms": [
+        "lose",
+        "passed",
+        "resolved",
+        "send",
+        "good",
+        "week",
+        "money",
+        "amazon",
+        "yr",
+        "yo",
+        "yesterday morning",
+        "15"
+      ],
+      "examples": [
+        {
+          "case_id": "1207580",
+          "customer_text": "[USER] This has still not been resolved and another week has passed. This is not good enough. Should I send amazon the bill for the money lose?",
+          "historical_reply": "[USER] Hi Damian- We have your info and we are investigating, if you would like an update please reply to the email you received."
+        }
+      ]
+    },
+    {
+      "cluster_id": 6,
+      "size": 1,
+      "top_terms": [
+        "service paid",
+        "user like",
+        "paid",
+        "like",
+        "service",
+        "yup",
+        "yrs",
+        "yr",
+        "yo",
+        "yesterday morning",
+        "15",
+        "14th"
+      ],
+      "examples": [
+        {
+          "case_id": "1584501",
+          "customer_text": "[USER] I’d like the service I paid for!",
+          "historical_reply": "[USER] I understand, pls contact us on the link previously provided, thanks."
+        }
+      ]
+    },
+    {
+      "cluster_id": 7,
+      "size": 1,
+      "top_terms": [
+        "date",
+        "arrival date",
+        "arrival",
+        "order date",
+        "recent",
+        "days",
+        "purchased",
+        "emails",
+        "look",
+        "user don",
+        "sure",
+        "buy"
+      ],
+      "examples": [
+        {
+          "case_id": "331574",
+          "customer_text": "[USER] Don't have emails to look back but order date + arrival date > 2 days for sure. Recent buy is date on email but 5 days from when I purchased",
+          "historical_reply": "[USER] We'd like to look into this with you! Reach out directly using the link & we can check out options: [URL]"
+        }
+      ]
+    },
+    {
+      "cluster_id": 8,
+      "size": 1,
+      "top_terms": [
+        "delivery url",
+        "dispatched",
+        "user says",
+        "say",
+        "way",
+        "says",
+        "delivery",
+        "url",
+        "yr",
+        "yo",
+        "yesterday morning",
+        "15"
+      ],
+      "examples": [
+        {
+          "case_id": "1342632",
+          "customer_text": "[USER] Says dispatched - it’s on its way... but had nothing to say it’s out for delivery. [URL]",
+          "historical_reply": "[USER] I understand your concern. Parcels can be delivered up until 21:00. Keep us posted on this delivery."
+        }
+      ]
+    },
+    {
+      "cluster_id": 9,
+      "size": 1,
+      "top_terms": [
+        "user apparently",
+        "delivery yesterday",
+        "posted",
+        "apparently",
+        "box",
+        "card",
+        "parcel",
+        "yesterday",
+        "user user",
+        "delivery",
+        "15",
+        "14th"
+      ],
+      "examples": [
+        {
+          "case_id": "1609098",
+          "customer_text": "[USER] [USER] so apparently you posted my delivery yesterday - no card in the box. No parcel anywhere on my property. What up?",
+          "historical_reply": "[USER] Sorry to hear this. This may help locate it: [URL] Keep us posted. We'd like to help."
+        }
+      ]
+    },
+    {
+      "cluster_id": 10,
+      "size": 1,
+      "top_terms": [
+        "clicked",
+        "cancelling",
+        "hard",
+        "end",
+        "asking",
+        "page",
+        "sure",
+        "amazon prime",
+        "times",
+        "new",
+        "sent",
+        "prime"
+      ],
+      "examples": [
+        {
+          "case_id": "411109",
+          "customer_text": "Cancelling Amazon Prime is hard. Four times I clicked end and it sent me to a new page asking if I am sure.",
+          "historical_reply": "[USER] I'm sorry for the trouble when ending your membership! If you need to still, you can end it here: [URL]"
+        }
+      ]
+    },
+    {
+      "cluster_id": 11,
+      "size": 1,
+      "top_terms": [
+        "arrive yesterday",
+        "26th",
+        "supposed arrive",
+        "user says",
+        "arrive",
+        "supposed",
+        "yesterday",
+        "says",
+        "yo",
+        "yesterday morning",
+        "15",
+        "14th"
+      ],
+      "examples": [
+        {
+          "case_id": "913800",
+          "customer_text": "[USER] It says between now and the 26th. It was supposed to arrive yesterday",
+          "historical_reply": "[USER] I can understand your frustration. Have you discussed this delay with us by phone or chat: [URL]"
+        }
+      ]
+    },
+    {
+      "cluster_id": 12,
+      "size": 1,
+      "top_terms": [
+        "csr",
+        "count",
+        "max",
+        "shipping",
+        "rep",
+        "user amazon",
+        "did",
+        "amazon",
+        "yesterday morning",
+        "15",
+        "14th",
+        "14"
+      ],
+      "examples": [
+        {
+          "case_id": "252844",
+          "customer_text": "[USER] #Amazon why did CSR rep MAX get agitated when questioned about discrepancies re:shipping count down clock? Earning xtra$on shipping?",
+          "historical_reply": "[USER] I'm very sorry for this experience. Can you tell us more about what happened?"
+        }
+      ]
+    },
+    {
+      "cluster_id": 13,
+      "size": 1,
+      "top_terms": [
+        "ur",
+        "ordr",
+        "ds",
+        "failure",
+        "dis",
+        "user placed",
+        "track",
+        "deliveries",
+        "placed",
+        "status",
+        "user user",
+        "way"
+      ],
+      "examples": [
+        {
+          "case_id": "23997",
+          "customer_text": "[USER] [USER] [USER] I placed ds ordr n status is still ‘on d way’, is not dis ur failure to track ur deliveries on time? Disgustng [URL]",
+          "historical_reply": "[USER] your order details, we consider it to be personal info. Our page is visible to the public. (3/3)^SF [USER] here: [URL] & we'll sort this for you. Also, please don't provide (2/3)^SF [USER] I'm sorry about the delay in the delivery of your order. Please provide your details (1/3)^SF"
+        }
+      ]
+    },
+    {
+      "cluster_id": 14,
+      "size": 1,
+      "top_terms": [
+        "delivery told",
+        "unbelievable",
+        "paying amazon",
+        "thursday",
+        "prime day",
+        "absolutely",
+        "paying",
+        "cancelled",
+        "come",
+        "day delivery",
+        "amazon prime",
+        "won"
+      ],
+      "examples": [
+        {
+          "case_id": "2427504",
+          "customer_text": "Paying for Amazon prime and Same day delivery and then being told it won't come until Thursday is absolutely unbelievable. That's getting cancelled! [USER]",
+          "historical_reply": "[USER] I am so sorry about your delay! You can find out more about same-day delivery here: [URL] Let us know if you completed all of these steps!"
+        }
+      ]
+    },
+    {
+      "cluster_id": 15,
+      "size": 2,
+      "top_terms": [
+        "unhappy",
+        "user unhappy",
+        "provided",
+        "services",
+        "doing",
+        "promised",
+        "helpful",
+        "response",
+        "email",
+        "yr",
+        "yo",
+        "yesterday morning"
+      ],
+      "examples": [
+        {
+          "case_id": "350105",
+          "customer_text": "[USER] very unhappy services provided promised something & doing something very unhappy with this [USER]",
+          "historical_reply": "[USER] Sorry to know that. Could you please let us know more about what went wrong? We'll definitely look into it."
+        },
+        {
+          "case_id": "1566960",
+          "customer_text": "[USER] Unhappy with the response to my email. Not helpful at all! 😤",
+          "historical_reply": "[USER] Sorry, what did the email advise? How much was the charge for and what does it say next to the charge on your statement?"
+        }
+      ]
+    },
+    {
+      "cluster_id": 16,
+      "size": 3,
+      "top_terms": [
+        "user times",
+        "form",
+        "times",
+        "need",
+        "reply",
+        "yup",
+        "yrs",
+        "yr",
+        "yo",
+        "yesterday morning",
+        "15",
+        "14th"
+      ],
+      "examples": [
+        {
+          "case_id": "916991",
+          "customer_text": "[USER] How many times do I need to fill the same form ?",
+          "historical_reply": "[USER] In that case, please refer our email correspondence to your account. We've addressed your concern."
+        },
+        {
+          "case_id": "2171056",
+          "customer_text": "[USER] How many times to reply",
+          "historical_reply": "[USER] I realize that, Vibhor. Please understand that we're unable to check the details over this medium. Please respond to our mail so we could take it from there."
+        },
+        {
+          "case_id": "2452881",
+          "customer_text": "[USER] How many times do I have to do the same thing",
+          "historical_reply": "[USER] You must have received our correspondence here: [URL] please reply to the email & we'll help you."
+        }
+      ]
+    },
+    {
+      "cluster_id": 17,
+      "size": 1,
+      "top_terms": [
+        "lock",
+        "unlock",
+        "user account",
+        "account",
+        "yrs",
+        "yr",
+        "yo",
+        "yesterday morning",
+        "15",
+        "14th",
+        "14",
+        "13th nov"
+      ],
+      "examples": [
+        {
+          "case_id": "1622258",
+          "customer_text": "[USER] my account has been lock please unlock",
+          "historical_reply": "[USER] You must have received an email correspondence from our account specialist team. Please revert on the same."
+        }
+      ]
+    },
+    {
+      "cluster_id": 18,
+      "size": 1,
+      "top_terms": [
+        "clue",
+        "user time",
+        "disappointed",
+        "response",
+        "url",
+        "shipping",
+        "time",
+        "order",
+        "yrs",
+        "yr",
+        "yo",
+        "yesterday morning"
+      ],
+      "examples": [
+        {
+          "case_id": "919869",
+          "customer_text": "[USER] first time disappointed with [URL] US .No clue about shipping . No response. Order 112-9790253-4328226 . [URL]",
+          "historical_reply": "[USER] We can't access your account, but from the chat, it looks like a seller-fulfilled order? Have you contacted the seller yet?"
+        }
+      ]
+    },
+    {
+      "cluster_id": 19,
+      "size": 3,
+      "top_terms": [
+        "details link",
+        "user submitted",
+        "submitted",
+        "shared",
+        "link",
+        "details",
+        "given",
+        "yo",
+        "yesterday morning",
+        "15",
+        "14th",
+        "14"
+      ],
+      "examples": [
+        {
+          "case_id": "191651",
+          "customer_text": "[USER] I have submitted the details on the link that was shared with me.",
+          "historical_reply": "[USER] Thanks for the heads up. We'll check the details and get back to you."
+        },
+        {
+          "case_id": "180761",
+          "customer_text": "[USER] I have submitted all details on given link.",
+          "historical_reply": "[USER] Thanks for the update. We have your details, we'll get back to you at the earliest with an update."
+        },
+        {
+          "case_id": "1576243",
+          "customer_text": "[USER] Submitted. please do the needful",
+          "historical_reply": "[USER] Thanks for submitting your details, Shyam. Our team will contact you soon."
+        }
+      ]
+    }
+  ]
+}
